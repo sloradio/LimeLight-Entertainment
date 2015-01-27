@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<br />
+<br />
+<br />
+<br />
+<div class="jumbotron" style="padding:25px; background: white;">
+    <h1>Limelight Entertainment</h1>
+    <p class="lead" style="font-size: 24px;">Limelight Entertainment is underground music label made up of musical pioneers of every genre. </p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg" style="color: white;">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-lg-4">
+        <h2>@Html.ActionLink("Artists", "Artists", "Home")</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-lg-4">
+        <h2>@Html.ActionLink("New Releases", "Releases", "Home")</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+
+    <div class="col-lg-4">
+        <h2>@Html.ActionLink("Tour Dates", "Tours", "Home")</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+
+</div>

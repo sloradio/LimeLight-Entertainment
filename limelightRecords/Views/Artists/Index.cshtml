@@ -1,0 +1,71 @@
+﻿@model IEnumerable<limelightRecords.Models.Artist>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h2>Index</h2>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ArtistName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArtistLocation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArtistGenre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SignDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookCost)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentlyAvailable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AgentID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArtistName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArtistLocation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArtistGenre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SignDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookCost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentlyAvailable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AgentID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ArtistID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ArtistID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ArtistID })
+        </td>
+    </tr>
+}
+
+</table>
